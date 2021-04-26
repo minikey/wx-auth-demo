@@ -1,0 +1,1 @@
+<view class="layer" catchtap="authCheckHandler" style="z-index:{{zIndex}};"></view>

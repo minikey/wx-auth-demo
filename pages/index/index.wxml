@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{!userInfo}}">
+      <button bindtap="act2Handler"> 函数授权显示头像</button>
+      <button bindtap="actHandler" data-msg="auth"> 组件授权显示头像 <Auth></Auth></button>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="userinfo">
+    <button bindtap="logoff"> 注销 </button>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
